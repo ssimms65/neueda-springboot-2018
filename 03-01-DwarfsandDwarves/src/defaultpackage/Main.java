@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main { 
 	public static void main(String[] args) {
 		
@@ -12,7 +14,7 @@ public class Main {
 	dwarfs.add("Deepy");
 	
 	System.out.println("The Disnet Dwarfs are: ");
-	for(String dwarf:dwarves) {
+	for(String dwarf:dwarfs) {
 		System.out.println(dwarf);
 	}
 		

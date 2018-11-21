@@ -1,0 +1,97 @@
+body {
+    background-color: lightgray;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+  position: relative; 
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  font-size: 10px;
+  width: 96.2%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     <img src="/images/purplespace.jpg" alt="Purple Space">;
+     
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.banner {
+    width: 100%;
+    height: 30%;
+}
+
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+
+h1 {
+    color: dimgray;
+    font-family: verdana;
+    font-size: 300%;
+}
+h2 {
+	color: LightSlateGrey;
+	font-family: courier;
+	font-size: 150%;
+}
+p {
+    color: dimgray;
+    font-family: timesnewroman;
+    font-size: 160%;
+}
