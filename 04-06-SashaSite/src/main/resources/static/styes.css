@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+h1 {color: #680D0E; font-weight:1000; font-size: 30px;}
+h2 {color:#680D0E; font-weight: 1000;font-size: 40px;}
+h3 {color:darkred; font-weight: 1000;font-size: 40px;}
+h4 {color:olivedrab; font-weight: 1000;font-size: 40px;}
+h5 {color:lightpink; font-weight: 1000;font-size: 40px;}
+h6 {color:skyblue; font-weight: 800;font-size: 30px;} /*contact us*/
+
+
+.container {
+  position: relative; 
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+

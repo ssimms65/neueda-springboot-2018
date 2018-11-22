@@ -18,13 +18,14 @@ public class DisneyController {
 	@GetMapping("")
 	public String disney(Model model) {
 		
-		DwarfService dwarfService = new DwarfService();
-		ArrayList<Dwarf> disneyDwarfs = dwarfService.getDisneyDwarfs();
+	DwarfService dwarfService = new DwarfService();
+	ArrayList<Dwarf> disneyDwarfs = dwarfService.getDisneyDwarfs();
 		
 		
-		model.addAttribute("pageTitle", "Disney!");
-		model.addAttribute("disneyDwarfs", disneyDwarfs);
-		return "disney";
+	model.addAttribute("pageTitle", "Disney!");
+	model.addAttribute("disneyDwarfs", disneyDwarfs);
+	return "disney";
+	
 	}	
 	
 }

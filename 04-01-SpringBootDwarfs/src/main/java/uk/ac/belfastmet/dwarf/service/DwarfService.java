@@ -12,7 +12,6 @@ public class DwarfService {
 	
 
 public ArrayList<Dwarf> getDisneyDwarfs(){
-
 		ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 		
 		Dwarf sleepy = new Dwarf("Sleepy", "Disney", "Sleepy.png");
@@ -36,7 +35,7 @@ public ArrayList<Dwarf> getDisneyDwarfs(){
 
 
 
-	public ArrayList<Dwarf> getTolkienDwarfs(){
+public ArrayList<Dwarf> getTolkienDwarfs(){
 		ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 		
 		Dwarf thorin = new Dwarf("Thorin", "Tolkien", "Thorin.png");

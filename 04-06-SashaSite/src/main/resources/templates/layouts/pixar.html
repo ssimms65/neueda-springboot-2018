@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Creepster|Old+Standard+TT" rel="stylesheet"> 
+  
+  <title th:text="${pageTitle}">People Home</title>
+</head>
+
+<body>
+
+<nav th:replace="layouts/nav :: navFragment">
+</nav>
+
+
+<div class="jumbotron">
+    <h1>Pixar Characters</h1> 
+  </div>
+  
+ 
+  <div class ="container">
+  	<p>Pixar Characters</p>
+  	
+  	<table class="table table-striped">
+  	<thead>
+  		<th>Name</th>
+  		<th>Author</th>
+  		<th>Image</th>
+  	</thead>
+  	<tbody>
+  		<tr th:each="people: ${pixarPeople}">
+  			<td th:text="${people.name}">fiona</td>
+  			<td th:text="${people.author}">Pixar</td>
+  			<td><img src="../static/img/fiona.png" th:src="@{/img/}+${sasha.image}"></img></td>
+  		</tr>
+  	</tbody>
+  	
+  	</table>
+  	
+</div>
+
+</body>
+</html>
