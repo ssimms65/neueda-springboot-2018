@@ -3,7 +3,7 @@ public class Dwarf {
 	
 	private String name;
 	private String author;
-	private String image; 
+	private String image;
 	
 	public Dwarf() {
 		super();
