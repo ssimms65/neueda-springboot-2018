@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import uk.ac.belfastmet.passengers.repository.PassengersRepository;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/search")
 
 public class SearchController {
 		

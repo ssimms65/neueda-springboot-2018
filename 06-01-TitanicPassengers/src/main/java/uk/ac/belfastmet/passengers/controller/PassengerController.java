@@ -19,7 +19,7 @@ public class PassengerController {
 		this.passengerRepository = passengerRepository;
 	}
 
-	@GetMapping("")
+	@GetMapping("/pass")
 	public String passengers(Model model) {
 		model.addAttribute("pageTitle", "Passengers");
 		model.addAttribute("passengers", this.passengerRepository.findByPassengerId(1));
