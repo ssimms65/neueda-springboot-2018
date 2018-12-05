@@ -17,9 +17,9 @@ public class Passengers {
 	private Integer age;
 	private Integer sibSp;
 	private Integer parch;
-	private Double ticket;
-	private Double fare;
-	private Double cabin;
+	private String ticket;
+	private String fare;
+	private String cabin;
 	private String embarked;
 	
 	public Passengers() {
@@ -27,7 +27,7 @@ public class Passengers {
 	}
 
 	public Passengers(Integer survived, Integer pClass, String name, String sex, Integer age,
-			Integer sibSp, Integer parch, Double ticket, Double fare, Double cabin, String embarked) {
+			Integer sibSp, Integer parch, String ticket, String fare, String cabin, String embarked) {
 		super();
 
 		this.survived = survived;
@@ -107,27 +107,27 @@ public class Passengers {
 		this.parch = parch;
 	}
 
-	public Double getTicket() {
+	public String getTicket() {
 		return ticket;
 	}
 
-	public void setTicket(Double ticket) {
+	public void setTicket(String ticket) {
 		this.ticket = ticket;
 	}
 
-	public Double getFare() {
+	public String getFare() {
 		return fare;
 	}
 
-	public void setFare(Double fare) {
+	public void setFare(String fare) {
 		this.fare = fare;
 	}
 
-	public Double getCabin() {
+	public String getCabin() {
 		return cabin;
 	}
 
-	public void setCabin(Double cabin) {
+	public void setCabin(String cabin) {
 		this.cabin = cabin;
 	}
 
@@ -139,8 +139,5 @@ public class Passengers {
 		this.embarked = embarked;
 	}
 
-	
-	
-	
 
 }

@@ -77,21 +77,21 @@ public class SearchController {
 	}
 	
 	@GetMapping("/searchticket")
-	public String searchTicket(@RequestParam("ticket") Double ticket, Model model) {
+	public String searchTicket(@RequestParam("ticket") String ticket, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByTicket(ticket));
 		return "passengersPage";
 	}
 	
 	@GetMapping("/searchfare")
-	public String searchFare(@RequestParam("fare") Double fare, Model model) {
+	public String searchFare(@RequestParam("fare") String fare, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByFare(fare));
 		return "passengersPage";
 	}
 	
 	@GetMapping("/searchcabin")
-	public String searchCabin(@RequestParam("cabin") Double cabin, Model model) {
+	public String searchCabin(@RequestParam("cabin") String cabin, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByCabin(cabin));
 		return "passengersPage";

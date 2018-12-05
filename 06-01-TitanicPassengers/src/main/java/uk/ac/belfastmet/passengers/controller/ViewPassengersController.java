@@ -21,10 +21,10 @@ public class ViewPassengersController {
 	}
 	
 	
-	@GetMapping("/view/{passengers.passengerId}")
-	public String viewPassengers(@PathVariable("passengers.passengerId") Integer passengerId, Model model) {
+	@GetMapping("/view/{passengerId}")
+	public String viewPassengers(@PathVariable("passengerId") Integer passengerId, Model model) {
 		model.addAttribute("pageTitle", "View");
-		model.addAttribute("passengers", this.passengersRepository.findAll());
+		model.addAttribute("passenger", this.passengersRepository.findByPassengerId(passengerId));
 		return "viewPassengers";
 	
 	}
