@@ -50,3 +50,4 @@
 ::1 - - [05/Dec/2018:13:14:59 +0000] "GET /phpmyadmin/index.php?ajax_request=1&recent_table=1&token=4ab96a164e995f81e9478664ca2648f6 HTTP/1.1" 200 218
 ::1 - - [05/Dec/2018:13:15:01 +0000] "GET /phpmyadmin/sql.php?db=titanic&table=passengers&token=4ab96a164e995f81e9478664ca2648f6&pos=0&ajax_request=true&ajax_page_request=true&menuHashes=786b4570-96cd0cfd&_nocache=154401570124374477 HTTP/1.1" 200 115703
 ::1 - - [05/Dec/2018:13:15:01 +0000] "GET /phpmyadmin/index.php?ajax_request=1&recent_table=1&token=4ab96a164e995f81e9478664ca2648f6 HTTP/1.1" 200 218
+::1 - - [05/Dec/2018:14:08:40 +0000] "GET /phpmyadmin/tbl_structure.php?db=titanic&table=passengers&token=4ab96a164e995f81e9478664ca2648f6&ajax_request=true&ajax_page_request=true&menuHashes=786b4570-96cd0cfd&_nocache=1544018920422906133 HTTP/1.1" 200 292

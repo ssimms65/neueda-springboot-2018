@@ -46,18 +46,18 @@
   	
   	<tbody>
   		<tr th:each="passenger: ${passengers}">
-  			<td th:integer="${passenger.passengerId}">1</td>
-  			<td th:integer="${passenger.survived}">0</td>
-  			<td th:integer="${passenger.pClass}">3</td>
-  			<td th:text="${passenger.name}">Braund, Mr. Owen Harris</td>
-  			<td th:text="${passenger.sex}">male</td>
-  			<td th:integer="${passenger.age}">22</td>
-  			<td th:integer="${passenger.sibSp}">1</td>
-  			<td th:integer="${passenger.parch}">0</td>
-  			<td th:double="${passenger.ticket}">A/5 21171</td>
-  			<td th:double="${passenger.fare}">7.25</td>
+  			<td th:integer="${passenger.passengerId}"></td>
+  			<td th:integer="${passenger.survived}"></td>
+  			<td th:integer="${passenger.pClass}"></td>
+  			<td th:text="${passenger.name}"></td>
+  			<td th:text="${passenger.sex}"></td>
+  			<td th:integer="${passenger.age}"></td>
+  			<td th:integer="${passenger.sibSp}"></td>
+  			<td th:integer="${passenger.parch}"></td>
+  			<td th:double="${passenger.ticket}"></td>
+  			<td th:double="${passenger.fare}"></td>
   			<td th:double="${passenger.cabin}"></td>
-  			<td th:text="${passenger.embarked}">S</td>
+  			<td th:text="${passenger.embarked}"></td>
   			<td><a href="#" th:href="@{view/} + ${passenger.passengerId}">View</a></td>			
   		</tr>
   	</tbody>	
