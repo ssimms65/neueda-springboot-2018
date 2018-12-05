@@ -1,10 +1,14 @@
 package uk.ac.belfastmet.passengers.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Passengers {
 	
+	@Id
+	@GeneratedValue
 	private Integer passengerId;
 	private Integer survived;
 	private Integer pClass;
@@ -22,10 +26,10 @@ public class Passengers {
 		super();
 	}
 
-	public Passengers(Integer passengerId, Integer survived, Integer pClass, String name, String sex, Integer age,
+	public Passengers(Integer survived, Integer pClass, String name, String sex, Integer age,
 			Integer sibSp, Integer parch, Double ticket, Double fare, Double cabin, String embarked) {
 		super();
-		this.passengerId = passengerId;
+
 		this.survived = survived;
 		this.pClass = pClass;
 		this.name = name;

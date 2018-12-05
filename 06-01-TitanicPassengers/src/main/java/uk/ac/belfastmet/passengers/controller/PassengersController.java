@@ -8,24 +8,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import uk.ac.belfastmet.passengers.repository.PassengersRepository;
 
 @Controller
-@RequestMapping("/passengers")
+@RequestMapping("")
 
-public class PassengerController {
+public class PassengersController {
 	
-	PassengersRepository passengerRepository;
+	PassengersRepository passengersRepository;
 
-	public PassengerController(PassengersRepository passengerRepository) {
+	public PassengersController(PassengersRepository passengersRepository) {
 		super();
-		this.passengerRepository = passengerRepository;
+		this.passengersRepository = passengersRepository;
 	}
 
-	@GetMapping("/pass")
+	@GetMapping("/passengers")
 	public String passengers(Model model) {
 		model.addAttribute("pageTitle", "Passengers");
-		model.addAttribute("passengers", this.passengerRepository.findByPassengerId(1));
-		return "passenger";
+		model.addAttribute("passengers", this.passengersRepository.findAll());
+		return "passengersPage";
 	
 	}
 	
-	
+
+
 }

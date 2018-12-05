@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import uk.ac.belfastmet.passengers.repository.PassengersRepository;
 
 @Controller
-@RequestMapping("/search")
+@RequestMapping("")
 
 public class SearchController {
 		
@@ -24,84 +24,84 @@ public class SearchController {
 	public String searchPassengerId(@RequestParam("passengerid") Integer passengerId, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByPassengerId(passengerId));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchsurvived")
 	public String searchSurvived(@RequestParam("survived") Integer survived, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findBySurvived(survived));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchpClass")
 	public String searchPClass(@RequestParam("pClass") Integer pClass, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByPClass(pClass));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchname")
 	public String searchName(@RequestParam("name") String name, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByName(name));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchsex")
 	public String searchSex(@RequestParam("sex") String sex, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findBySex(sex));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchage")
 	public String searchAge(@RequestParam("age") Integer age, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByAge(age));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchsibSp")
 	public String searchSibSp(@RequestParam("sibSp") Integer sibSp, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findBySibSp(sibSp));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchparch")
 	public String searchParch(@RequestParam("parch") Integer parch, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByParch(parch));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchticket")
 	public String searchTicket(@RequestParam("ticket") Double ticket, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByTicket(ticket));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchfare")
 	public String searchFare(@RequestParam("fare") Double fare, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByFare(fare));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchcabin")
 	public String searchCabin(@RequestParam("cabin") Double cabin, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByCabin(cabin));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	@GetMapping("/searchembarked")
 	public String searchEmbarked(@RequestParam("embarked") String embarked, Model model) {
 		model.addAttribute("pageTitle", "Search");
 		model.addAttribute("passengers", this.passengerRepository.findByEmbarked(embarked));
-		return "passengers";
+		return "passengersPage";
 	}
 	
 	
