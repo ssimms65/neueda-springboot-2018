@@ -2,13 +2,15 @@ package uk.ac.belfastmet.passengers.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Passengers {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer passengerId;
 	private Integer survived;
 	private Integer pClass;
@@ -26,10 +28,9 @@ public class Passengers {
 		super();
 	}
 
-	public Passengers(Integer survived, Integer pClass, String name, String sex, Integer age,
-			Integer sibSp, Integer parch, String ticket, String fare, String cabin, String embarked) {
+	public Passengers(Integer survived, Integer pClass, String name, String sex, Integer age, Integer sibSp,
+			Integer parch, String ticket, String fare, String cabin, String embarked) {
 		super();
-
 		this.survived = survived;
 		this.pClass = pClass;
 		this.name = name;
@@ -138,6 +139,8 @@ public class Passengers {
 	public void setEmbarked(String embarked) {
 		this.embarked = embarked;
 	}
+
+
 
 
 }

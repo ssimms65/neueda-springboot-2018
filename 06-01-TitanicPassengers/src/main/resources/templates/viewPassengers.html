@@ -14,72 +14,66 @@
   <title th:text="${pageTitle}">Passengers</title>
   </head>
 
-
 <body>
 
 <nav th:replace="layouts/nav :: navFragment">
 </nav>
-
 
 <div class="jumbotron text-center">
     <h1>Titanic Passengers</h1> 
   </div>
   
 <div class ="container-fluid">
-  	<p>Titanic Passengers</p>
   
   	<table class="table table-striped">
-	<thead>
-  		<th>PassengerId</th>
-  		<th>Survived</th>
-  		<th>PClass</th>
-  		<th>Name</th>
-  		<th>Sex</th>
-  		<th>Age</th>
-  		<th>SibSp</th>
-  		<th>Parch</th>
-  		<th>Ticket</th>
-  		<th>Fare</th>
-  		<th>Cabin</th>
-  		<th>Embarked</th>
-	</thead>
-  	
+
   	<tbody>
   	<tr>
-  			<td> Passenger Id </td>
+  			<th>Passenger Id</th>
   			<td th:text="${passenger.passengerId}"></td>
   	</tr>
   	<tr>
+  			<th>Survived</th>
   			<td th:text="${passenger.survived}"></td>
   			</tr>
   	<tr>
+  			<th>PClass</th>
   			<td th:text="${passenger.pClass}"></td>
   			</tr>
   	<tr>
+  			<th>Name</th>
   			<td th:text="${passenger.name}"></td>
   			</tr>
   	<tr>
+  			<th>Sex</th>
   			<td th:text="${passenger.sex}"></td>
   			</tr>
   	<tr>
+  			<th>Age</th>
   			<td th:text="${passenger.age}"></td>
   			</tr>
   	<tr>
+  			<th>SibSp</th>
   			<td th:text="${passenger.sibSp}"></td>
   			</tr>
   	<tr>
+  			<th>Parch</th>
   			<td th:text="${passenger.parch}"></td>
   			</tr>
   	<tr>
+  			<th>Ticket</th>
   			<td th:text="${passenger.ticket}"></td>
   			</tr>
   	<tr>
+  			<th>Fare</th>
   			<td th:text="${passenger.fare}"></td>
   			</tr>
   	<tr>
+  			<th>Cabin</th>
   			<td th:text="${passenger.cabin}"></td>
   			</tr>
   	<tr>
+  			<th>Embarked</th>
   			<td th:text="${passenger.embarked}"></td>		
   		</tr>
   	</tbody>	
