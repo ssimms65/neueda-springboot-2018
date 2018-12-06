@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import uk.ac.belfastmet.passengers.domain.Passengers;
 import uk.ac.belfastmet.passengers.repository.PassengersRepository;
@@ -19,6 +19,7 @@ import uk.ac.belfastmet.passengers.repository.PassengersRepository;
 
 public class PassengersController {
 	
+	//@Autowired?? 
 	PassengersRepository passengersRepository;
 
 	public PassengersController(PassengersRepository passengersRepository) {
@@ -73,20 +74,15 @@ public class PassengersController {
 		
 	}
 	
-	
-/*	
-
-		
-	
-	
 	@GetMapping("/delete/{passengerId}")
 	public String viewPassengers(@PathVariable("passengerId") Integer passengerId, Model model, 
 			RedirectAttributes redirectAttributes) {
 
 		redirectAttributes.addFlashAttribute("message", "Successfully deleted passenger!");
 		this.passengersRepository.deleteById(passengerId);
-		return "redirect:/passengers";
+		return "redirect:/passengers"; //This not working
 		
-		}*/
+		}
+	
 		
 	}
