@@ -1,4 +1,4 @@
-manufacturer,Cereal,energy_(kJ),calories_(kcal),protein_(g),carbohydrate_(g),sugars_(g),fat_(g),saturates_(g),fibre_(g),sodium_(g),salt_(g),iron_(mg)
+manufacturer,cereal_name,energy_kJ,calories_kcal,protein_g,carbohydrate_g,sugars_g,fat_g,saturates_g,fibre_g,sodium_g,salt_g,iron_mg
 Weetabix,Weetos,1594,377,8.4,74.7,23.5,4.9,1,6.2,0.09,0.23,11.9
 Kellogg's,Bran Flakes,1383,326,10,67,22,2,0.5,15,0.5,1.3,11.6
 Kellogg's,Coco pops,1641,387,5,85,34,3,1.5,2,0.45,1.15,8
