@@ -4,7 +4,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import uk.ac.belfastmet.breakfastCereals.domain.Cereals;
 
-public interface CerealsRepository extends CerealsRepository<Cereals, Integer> {
+public interface CerealsRepository extends CrudRepository<Cereals, Integer> {
 	
 	Iterable <Cereals> findByCerealManufacturer(String manufacturer);
 	Cereals findByCerealName(String cerealName);
