@@ -15,6 +15,7 @@ public class Passenger {
 	private String cabin;
 	private String embarked;
 	
+	//Constructors
 	public Passenger() {
 		super();
 	}
@@ -35,13 +36,14 @@ public class Passenger {
 		this.embarked = embarked;
 	}
 
+	//Getters and setters
 	public Integer getPassengerId() {
 		return passengerId;
 	}
-
+	
 	public void setPassengerId(Integer passengerId) {
 		this.passengerId = passengerId;
-	}
+	} //We can't set the PassengerId anyway
 
 	public Integer getSurvived() {
 		return survived;
