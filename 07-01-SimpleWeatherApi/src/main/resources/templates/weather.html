@@ -42,6 +42,7 @@
 			<td th:text="${todaysWeather.location.name}">Name</td>
 			<td th:text="${todaysWeather.weather.description}">WeatherDescription</td>
 			<td th:text="${todaysWeather.weather.temperature}">Temperature</td>
+			<!-- weather.description = &alt:strong&gt;Raining</strong> ---This is the difference between text and view text-->
 			<td><img src="" th:src="${todaysWeather.weather.image}"></td>
 		</tr>  
 	</tbody>

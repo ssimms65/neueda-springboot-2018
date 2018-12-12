@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav th:replace="layouts/nav :: navFragment"></nav>
+
+	<div class="jumbotron text-center">
+		<h1>Belfast Events</h1>
+	</div>
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <img src="/img/belfast.jpg" width=100% height=450></img>
+  </div>
+</div>
+
+	<div class="container-fluid">
+
+		<p th:text=${event.title}>Name</p>
+		<p th:text="${#dates.format(event.startDate, 'dd/MM/yyyy')}">31/12/2017</p>
+		<p th:text="${#dates.format(event.endDate, 'dd/MM/yyyy')}">31/12/2017</p>
+		<p th:text=${event.time}>Time</p>
+
+		<div th:switch="${event.venue}">
+			<p th:case="''" th:text="${event.venue}">Venue has no link</p>
+			<p th:case="*">
+				<a href="" th:href="${event.venueUrl}" th:text=${event.venue}
+					target=_blank>Venue has no link</a>
+			<p>
+		</div>
+
+		<p th:text=${event.cost}>Cost</p>
+		<p th:text=${event.audience}>Audience</p>
+		<p th:text=${event.theme}>Theme</p>
+		<p th:text=${event.content}>Content</p>
+		<p th:text=${event.time}>Time</p>
+
+		<div th:switch="${event.image}">
+			<p th:case="''">
+				<!-- No image -->
+			</p>
+			<p th:case="*">
+				<img src="" th:attr="src=${event.image}" />
+		</div>
+
+	</div>
+
+</body>
+</html>
