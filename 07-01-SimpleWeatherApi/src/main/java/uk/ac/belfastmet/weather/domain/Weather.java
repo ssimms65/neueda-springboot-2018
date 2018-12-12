@@ -1,6 +1,5 @@
 package uk.ac.belfastmet.weather.domain;
 
-import java.util.Map;
 
 import lombok.Data;
 
@@ -13,9 +12,24 @@ public class Weather {
 	private String humidity;
 	private Integer pressure;
 	private Integer cloudCover; 
-	private Map<String, Object> wind; //Object... but for now it's a map
+	private Wind wind;
 	private String image;
 	
+	public String toString() {
+		
 	
-
+	String weather = this.getDescription() + ", "
+			+ this.getPrecipitation() + ", "
+			+ this.getTemperature() + ", "
+			+ this.getHumidity() + ", "
+			+ this.getPressure() + ", "
+			+ this.getCloudCover() + ", "
+			+ this.getWind() + ", "
+			+ this.getImage() + ", "
+			;
+		return weather; //this is for testing 
+	
+	}
 }
+
+//Correct

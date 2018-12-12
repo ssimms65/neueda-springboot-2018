@@ -9,5 +9,15 @@ public class Location {
 	private Float latitude;
 	private Float longitude;
 	
+	public String toString() {
 
+		//Moved from TodaysWeather class so each class controls it's toString
+		
+		String location = "\n" + this.getName() + ", "
+							   + this.getLatitude() + ", "
+							   + this.getLongitude() + "\n ";
+
+		return location;
+	}
 }
+//Correct

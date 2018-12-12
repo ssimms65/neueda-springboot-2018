@@ -29,7 +29,7 @@ public class WeatherController {
 		
 		//build for Belfast first
 		String belfastWeatherUrl=
-				"http://www.codingfury.net/training/weathersample/weather.hpp?location=belfast";
+				"http://www.codingfury.net/training/weathersample/weather.hpp?location=" + Location;
 		
 		RestTemplate restTemplate = new RestTemplate();
 		TodaysWeather todaysWeather	= restTemplate.getForObject(belfastWeatherUrl, TodaysWeather.class); 
@@ -38,11 +38,26 @@ public class WeatherController {
 		Logger logger = LoggerFactory.getLogger(TodaysWeather.class);
 		logger.info(todaysWeather.toString());
 		
+		switch(Location) {
+		case "london":
+		    model.addAttribute("pageTitle", "London");
+			break;
+		case "belfast":
+		    model.addAttribute("pageTitle", "Belfast");
+			break;
+		case "dublin":
+		    model.addAttribute("pageTitle", "Dublin");
+			break;
+
+		}
+		
+		
+		
 		model.addAttribute("todaysWeather", todaysWeather);
 		return "weather";
 		
 		//We are going to need to put this in the service
 	}
-
-
+ 
+	
 }
