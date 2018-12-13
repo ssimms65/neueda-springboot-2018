@@ -24,17 +24,68 @@
 	</div>
 
 
-<div class="hero-image">
-  <div class="hero-text">
-    <img src="/img/belfast.jpg" width=100% height=450></img>
-  </div>
-</div>
+	<div class="hero-image">
+		<div class="hero-text">
+			<img src="/img/belfast.jpg" width=100% height=450></img>
+		</div>
+	</div>
 
-	<div class="container-fluid">
+	<!-- <div class="container-fluid"> -->
 
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Identifier</th>
+					<th>URL</th>
+					<th>Start Date</th>
+					<th>End Date</th>
+					<th>Time</th>
+					<th>Venue</th>
+					<th>Venue Url</th>
+					<th>Audience</th>
+					<th>Theme</th>
+					<th>Cost</th>
+					<th></th>
+
+					<th></th>
+
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="event: ${allEvents}">
+					<td th:text="${event.identifier}"></td>
+					<td th:text="${event.url}"></td>
+					<td th:text="${event.startDate}"></td>
+					<td th:text="${event.endDate}"></td>
+					<td th:text="${event.time}"></td>
+					<td th:text="${event.venue}"></td>
+					<td th:text="${event.venueUrl}"></td>
+					<td th:text="${event.image}"></td>
+					<td th:text="${event.audience}"></td>
+					<td th:text="${event.theme}"></td>
+					<td th:text="${event.cost}"></td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		<div th:replace="layouts/scripts :: scriptsFragment"></div>
+
+</body>
+
+</html>
+
+
+<!-- 	
+	
+	<div th:each = "events : allEvents">
+	
+		
+		
 		<p th:text=${event.title}>Name</p>
-		<p th:text="${#dates.format(event.startDate, 'dd/MM/yyyy')}">31/12/2017</p>
-		<p th:text="${#dates.format(event.endDate, 'dd/MM/yyyy')}">31/12/2017</p>
+		<p th:text="${#dates.format(event.startDate)}">31/12/2017</p>
+		<p th:text="${#dates.format(event.endDate)}">31/12/2017</p>
 		<p th:text=${event.time}>Time</p>
 
 		<div th:switch="${event.venue}">
@@ -44,6 +95,7 @@
 					target=_blank>Venue has no link</a>
 			<p>
 		</div>
+		
 
 		<p th:text=${event.cost}>Cost</p>
 		<p th:text=${event.audience}>Audience</p>
@@ -54,12 +106,12 @@
 		<div th:switch="${event.image}">
 			<p th:case="''">
 				<!-- No image -->
-			</p>
+<!--	</p>
 			<p th:case="*">
 				<img src="" th:attr="src=${event.image}" />
 		</div>
-
 	</div>
+</div>
 
 </body>
-</html>
+</html> -->

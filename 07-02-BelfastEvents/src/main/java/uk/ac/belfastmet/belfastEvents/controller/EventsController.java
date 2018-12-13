@@ -1,27 +1,49 @@
 package uk.ac.belfastmet.belfastEvents.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
+import uk.ac.belfastmet.belfastEvents.domain.AllEvents;
+
 @Controller
 @RequestMapping("")
-public class BelfastEventsController {
-
-	@GetMapping
+public class EventsController {
+	
+	@GetMapping("/home")
 	public String home() {
 		return "home";
 	}
 	
+	@GetMapping("/events")
+	public String events(Model model) {
+
+		String belfastEventsUrl= "https://neueda-flask-bndouglas.c9users.io/belfast-events/api/";
+		RestTemplate restTemplate = new RestTemplate();
+		
+		AllEvents allEvents = restTemplate.getForObject(belfastEventsUrl, AllEvents.class);
+		
+		model.addAttribute("allEvents", allEvents.getAllEvents());
+		
+		return "events";
+		
+	}
+	
+}
+	
+	
+//
+//	@GetMapping
+//	public String home() {
+//		return "home";
+//	}
+	
 //	@GetMapping("/belfastEvents/{event}")
 //	public String belfast(@PathVariable("event") String event, Model model) {
 //		
-//		//build for Belfast first
+//		//build for Belfast first 
 //		String belfastEventsUrl=
 //				"http://www.belfastcity.gov.uk/events/Event-95491.aspx" + event;
 //				
@@ -55,6 +77,6 @@ public class BelfastEventsController {
 //	}
 // 
 	
-}
+
 
 
